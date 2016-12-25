@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MagicentoSettings">
+    <option name="pathToMage" value="$PROJECT_DIR$/app/Mage.php" />
+    <option name="phpEnabled" value="true" />
+    <option name="pathToPhp" value="" />
+    <option name="urlToMagento" value="http://dev.assimilate.com" />
+    <option name="packages" value="" />
+    <option name="themes" value="" />
+    <option name="projectClosedCorrectly" value="false" />
+    <option name="basicAuthUsername" value="" />
+    <option name="basicAuthPassword" value="" />
+    <option name="pathsToMagentoSerialized" value="$PROJECT_DIR$" />
+    <option name="pathToMagentoForNewFiles" value="$PROJECT_DIR$" />
+    <option name="modmanProjectChecked" value="true" />
+    <option name="customSignatures" value="" />
+    <option name="d" value="CL9u55IZCn98aXr1pE1v7ANPtPaW0akmQ+bwCBEMEBSmoS4V36vhJvJ0K2SvdIXLfh0c6/mQGgQz&#13;&#10;haP2F38ruTjc7YS6qK5UNBDk/FOeC5sCxj9MUUpedTWtpw1H5WVjkgW5/hoY7LEMQRQ0rQkHcsZy&#13;&#10;qh8Tb/9A+cSmftmjLXg=&#13;&#10;" />
+    <option name="advancedTypeInferenceEnabled" value="false" />
+  </component>
+</project>
