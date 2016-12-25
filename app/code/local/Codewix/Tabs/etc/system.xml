@@ -1,0 +1,171 @@
+<config>
+    <tabs>
+        <tabsconfig translate="label" module="tabs">
+            <label>Codewix Tabs Config</label>
+            <sort_order>0</sort_order>
+        </tabsconfig>
+    </tabs> 
+       <sections>
+        <tabs_section translate="label" module="tabs">
+            <label>Tabs</label>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>tabsconfig</tab>
+            	<groups>
+          <tabs_group translate="label">
+            <label>Configuration Options</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store> 
+						  <fields>
+							  <tabs_field1>
+								  <label>Tab1:</label>
+								  <frontend_type>select</frontend_type>
+								  <source_model>tabs/options</source_model> 
+								  <comment>Choose Content for tab1</comment>
+								  <sort_order>1</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store>                    
+							  </tabs_field1>
+							  <tabs_category_field1>
+								  <label>Select Category:</label>
+								  <frontend_type>select</frontend_type> 
+								  <source_model>tabs/CategoryNames</source_model> 
+								  <comment>Choose Category for tab1</comment>
+								  <sort_order>2</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store> 
+								  <validate>required-entry </validate>
+								  <depends><tabs_field1>4</tabs_field1></depends>
+							  </tabs_category_field1>
+							
+							  <tabs_field2>
+								  <label>Tab2:</label>
+								  <frontend_type>select</frontend_type>
+								  <source_model>tabs/options</source_model>
+								  <comment>Choose Content for tab2</comment> 
+								  <sort_order>3</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store>                    
+							  </tabs_field2>
+													  <tabs_category_field2>
+								  <label>Select Category:</label>
+								  <frontend_type>select</frontend_type> 
+								  <source_model>tabs/CategoryNames</source_model> 
+								  <comment>Choose Category for tab2</comment>
+								  <sort_order>4</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store> 
+								  <validate>required-entry </validate>
+								  <depends><tabs_field2>4</tabs_field2></depends>
+							  </tabs_category_field2>
+                 
+							  <tabs_field3>
+								  <label>Tab3:</label>
+								  <frontend_type>select</frontend_type>
+								  <source_model>tabs/options</source_model> 
+								  <comment>Choose Content for tab3</comment>
+								  <sort_order>5</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store>          
+								  <validate>validate-select</validate>          
+							  </tabs_field3>
+							  <tabs_category_field3>
+								  <label>Select Category:</label>
+								  <frontend_type>select</frontend_type> 
+								  <source_model>tabs/CategoryNames</source_model> 
+								  <comment>Choose Category</comment>
+								  <sort_order>6</sort_order>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store> 
+								  <validate>required-entry </validate>
+								  <depends><tabs_field3>4</tabs_field3></depends>
+							  </tabs_category_field3>
+							 <tabs_perpage>
+								  <label>Numbers of products per page:</label>
+								  <frontend_type>text</frontend_type> 
+								  <source_model>tabs/CategoryNames</source_model> 
+								  <comment>Enter Number of products to be displayed per page</comment>
+								  <sort_order>7</sort_order>
+								  <default>8</default>
+								  <show_in_default>1</show_in_default>
+								  <show_in_website>1</show_in_website>
+								  <show_in_store>1</show_in_store> 
+								  <validate>required-entry </validate>
+							 </tabs_perpage>
+      		</fields>                
+        </tabs_group>
+				<tabs_group1 translate="label">
+                    <label>Visibility Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+						<fields>
+							<tabs_field4>
+								<label>Show on home page:</label>
+								<frontend_type>select</frontend_type> 
+								<source_model>adminhtml/system_config_source_yesno</source_model> 
+								<comment>Choose Yes/No</comment>
+								<sort_order>7</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store> 
+								<validate>required-entry </validate>
+							</tabs_field4>
+							<tabs_field5>
+								<label>Show on category pages:</label>
+								<frontend_type>select</frontend_type> 
+								<source_model>adminhtml/system_config_source_yesno</source_model> 
+								<comment>Choose Yes/No</comment>
+								<sort_order>8</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store> 
+								<validate>required-entry </validate>
+							</tabs_field5>
+						</fields>	
+				</tabs_group1>		
+				<tabs_group2 translate="label">
+                    <label>Appearence Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+						<fields>
+							<tabs_field6>
+								<label>Width on home page:</label>
+								<frontend_type>text</frontend_type> 
+								<comment>Enter numeric value</comment>
+								<sort_order>9</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store> 
+							</tabs_field6>
+							<tabs_field7>
+								<label>Width on category pages:</label>
+								<frontend_type>text</frontend_type> 
+								<comment>Enter numeric value</comment>
+								<sort_order>10</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store> 
+							</tabs_field7>
+						</fields>
+				</tabs_group2>	
+            </groups>
+        </tabs_section> 
+      </sections>   
+</config>

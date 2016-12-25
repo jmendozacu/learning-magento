@@ -1,0 +1,131 @@
+<style type="text/css">
+.cms-index-index  #tabs {
+
+	width: <?php if(Mage::getStoreConfig('tabs_section/tabs_group2/tabs_field6')) echo Mage::getStoreConfig('tabs_section/tabs_group2/tabs_field6')."px"; else echo "688px";?>
+}
+.catalog-category-view  #tabs {
+
+	width: <?php if(Mage::getStoreConfig('tabs_section/tabs_group2/tabs_field6')) echo Mage::getStoreConfig('tabs_section/tabs_group2/tabs_field7')."px"; else echo "417px";?>;
+}
+</style>
+<script type="text/javascript">
+//jQuery.noConflict();
+jQuery(function(){
+		jQuery('#tabs').tabs();
+	});
+	
+jQuery(document).ready(function() {
+
+	
+	function showLoader(){
+	
+		jQuery('.search-background').fadeIn(200);
+	}
+	
+	function hideLoader(){
+	
+		jQuery('.search-background').fadeOut(200);
+	};
+	jQuery("#paging_button li").on('click',function(){
+		showLoader();
+		if(jQuery(this).attr('class')=='last-li'){
+			last='true';
+		}
+		else{
+			last='false';
+		}		
+		jQuery("#paging_button li").css({'color' : ''});
+		jQuery(this).css({'color' : '#006699'});
+		pageid = this.id;
+		jQuery("#content").load("<?php echo $this->getUrl('tabs/index/get')?>?page=" + this.id+"&last="+last, hideLoader);
+		
+		return false;
+	});
+
+	jQuery("#1").css({'color' : '#006699'});
+	showLoader();
+	jQuery("#content").load("<?php echo $this->getUrl('tabs/index/get')?>?page=1", hideLoader);
+	count = 0;
+	jQuery('#tabs ul li a').click(function() {
+		tab_id = jQuery(this).attr('href').replace('#tabs-','');
+		//alert('$ it here--'+);
+		//alert(tab_id);
+		if(count == 0 || count == 1){
+			if(tab_id != 1) {
+			 showLoader();
+			 }
+		}
+		if(tab_id == 1) {
+		hideLoader();
+		}
+		count++;
+		jQuery("#content-"+tab_id).load("<?php echo $this->getUrl('tabs/index/get')?>?page=1&tab="+tab_id, hideLoader);
+	});
+	jQuery('#tabs-2 #paging_button-2 ul li').on('click',function() {
+		if(jQuery(this).attr('class')=='last-li'){
+			last='true';
+		}
+		else{
+			last='false';
+		}				
+		page_id = jQuery(this).attr('id');
+		showLoader();
+		jQuery("#paging_button-2 li").css({'color' : ''});
+		jQuery(this).css({'color' : '#006699'});				
+		//alert('Ahhh!!! $ me'+page_id);
+		jQuery("#content-2").load("<?php echo $this->getUrl('tabs/index/get')?>?page="+page_id+"&tab=2&last="+last, hideLoader);
+	});	
+	jQuery('#tabs-3 #paging_button-3 ul li').on('click',function() {
+		if(jQuery(this).attr('class')=='last-li'){
+			last='true';
+		}
+		else{
+			last='false';
+		}		
+		page_id = jQuery(this).attr('id');
+		showLoader();
+		jQuery("#paging_button-3 li").css({'color' : ''});
+		jQuery(this).css({'color' : '#006699'});			
+		//alert('Ahhh!!! $ me'+page_id);
+		jQuery("#content-3").load("<?php echo $this->getUrl('tabs/index/get')?>?page="+page_id+"&tab=3&last="+last, hideLoader);
+	});
+});
+
+</script>
+
+<div id="tabs">
+		<div class="cart_navigation_bg"></div>	
+		<ul>
+			<li><a href="#tabs-1"><?php $this->getTabLabels(1)?></a></li>
+			<li><a href="#tabs-2"><?php $this->getTabLabels(2)?></a></li>
+			<li><a href="#tabs-3"><?php $this->getTabLabels(3)?></a></li>
+		</ul>
+
+	<div id="tabs-1">
+		<div class="search-background">
+			<label><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/base/default/images/loader.gif" alt="" /></label>
+		</div>
+		<div id="content">
+		&nbsp;
+		</div>
+
+	</div>
+	<div id="tabs-2">
+		<div class="search-background">
+			<label><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/base/default/images/loader.gif" alt="" /></label>
+		</div>
+		<div id="content-2">
+		&nbsp;
+		</div>
+	
+	</div>
+	<div id="tabs-3">
+		<div class="search-background">
+			<label><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN)?>frontend/base/default/images/loader.gif" alt="" /></label>
+		</div>
+		<div id="content-3">
+		&nbsp;
+		</div>
+	</div> 
+</div>
+

@@ -1,0 +1,41 @@
+<layout version="0.1.0">
+      <default>
+        <reference name="head">
+              <action method="addJs">
+				<script>jquery-1.8.3.js</script>
+				<params><![CDATA[name="js001_first"]]></params>
+			</action>
+              <action method="addCss"><stylesheet>css/tabs.css</stylesheet></action>
+              <action method="addJs">
+				<script>jquery-ui-1.10.3.custom.min.js</script>
+				<params><![CDATA[name="js002_second"]]></params>
+			</action>
+			
+               <action method="addCss"><stylesheet>css/ui-lightness/jquery-ui-1.10.3.custom.css</stylesheet></action>
+           </reference>
+      </default>
+      <tabs_index_index>
+           <reference name="content">
+                <block type="tabs/Tabs"  name="tabs"
+                          template="tabs/tabs.phtml" />
+           </reference>
+      </tabs_index_index>
+	  <cms_index_index>
+			<reference name="content">
+				<block type="tabs/tabs" name="tabs" before="_">
+				<action method="setTemplate" ifconfig="tabs_section/tabs_group1/tabs_field4">
+                    <template>tabs/tabs.phtml</template> 
+                </action>
+                </block>	
+			</reference>
+		</cms_index_index>
+		<catalog_category_view>
+			<reference name="content">
+				<block type="tabs/tabs" name="tabs" before="_">
+				<action method="setTemplate" ifconfig="tabs_section/tabs_group1/tabs_field5">
+                    <template>tabs/tabs.phtml</template> 
+                </action>
+                </block>	
+			</reference>
+		</catalog_category_view>
+</layout>

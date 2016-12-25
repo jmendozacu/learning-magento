@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hermes_assimilate>
+            <version>0.1.0</version>
+        </Hermes_assimilate>
+    </modules>
+    <global>
+        <models>
+            <hermes_assimilate>
+                <class>Hermes_assimilate_Model</class>
+                <resourceModel>hermes_assimilate_resource</resourceModel>
+            </hermes_assimilate>
+            <hermes_assimilate_resource>
+                <class>Hermes_assimilate_Model_Resource</class>
+            </hermes_assimilate_resource>
+        </models>
+        <blocks>
+            <hermes_assimilate>
+                <class>Hermes_assimilate_Block</class>
+            </hermes_assimilate>
+        </blocks>
+        <helpers>
+            <hermes_assimilate>
+                <class>Hermes_assimilate_Helper</class>
+            </hermes_assimilate>
+        </helpers>
+    </global>
+</config>

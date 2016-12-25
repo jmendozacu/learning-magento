@@ -1,0 +1,29 @@
+<?php $_product = $this->getProduct(); ?>
+<?php if($_crossSellProducts = $_product->getCrossSellProducts()): ?>
+
+    <div class="crossell-block">
+        <!--<div class="crosssell-title">Compatible with <?php /*echo $_helper->productAttribute($_product, $_product->getName(), 'name') */?></div>-->
+
+        <?php foreach ($_crossSellProducts as $_item): ?>
+            <?php $_item = Mage::getModel('catalog/product')->load($_item->getId()); ?>
+
+            <div class="crosssell-product-block">
+                <div class="crosssell-img">
+                    <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>">
+                        <img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(110, 120); ?>" alt="<?php echo $_item->getName() ?>" />
+                    </a>
+                </div>
+                <div class="crosssell-product-name">
+                    <a href="<?php echo $_item->getProductUrl() ?>">
+                        <?php echo $_item->getName() ?>
+                    </a>
+                </div>
+                <div class="price">
+                    <?php echo $this->getPriceHtml($_item, true) ?>
+                </div>
+                <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php echo Mage::getUrl('checkout/cart/add', array('product'=>$_item->getId(),'qty'=>1, 'form_key' => Mage::getSingleton('core/session')->getFormKey())) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+<?php endif; ?>

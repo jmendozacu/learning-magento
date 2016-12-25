@@ -1,0 +1,160 @@
+body {
+     font-family: Arial,Sans-Serif;
+     font-size: 0.75em;
+     text-align: center;
+}
+
+#container {
+     margin-top: 10px;
+     min-height: 455px;
+     overflow: hidden;
+     padding: 12px;
+     text-align: center;
+     text-decoration: none;
+     width: 510px;
+}
+
+#no_product {
+
+text-align:center;
+
+}
+
+#tabs {
+
+	width: auto;
+}
+.shopp {
+     border-radius: 8px 8px 8px 8px;
+     border: 1px solid #CCCCCC;
+     font-family: "LubalGraphBdBTBold",Tahoma;
+     font-size: 12px;
+     height: 0px;
+     margin-bottom: 3px;
+     opacity: 0;
+     padding: 8px;
+     position: relative;
+     text-align: justify;
+     width: 500px;
+}
+
+#container .shopp {
+     color: #000066;
+     font-family: Arial,Helvetica,sans-serif;
+     font-size: 14px;
+     margin-bottom: 11px;
+     padding: 5px 5px 12px;
+     text-align: justify;
+}
+
+.search-background {
+     color: #FFFFFF;
+     display: none;
+     font-size: 13px;
+     font-weight: bold;
+     height: 160px;
+     opacity: 0.5;
+     padding: 17px 0pt 0pt 26px;
+     position: absolute;
+     text-align: center;
+     text-decoration: none;
+     text-shadow: 0px 0px 20px #FFFFFF;
+     width: 520px;
+     z-index: 1000;
+}
+
+#paging_button, #paging_button-2, #paging_button-3 {
+    // left: 435px;
+     position: relative;
+     top: -5px;
+}
+
+search-background label {
+     border: 1px solid #66FF00;
+}
+
+#paging_button ul, #paging_button-2 ul, #paging_button-3 ul {
+     margin: 8px;
+     padding: 0px;
+     //width: 510px;
+     float:right;
+}
+
+#paging_button ul li, #paging_button-2 ul li, #paging_button-3 ul li {
+     border-radius: 3px 3px 3px 3px;
+     color: #000000;
+     cursor: pointer;
+     float: left;
+     font-family: helvetica,arial,sans-serif;
+     font-size: 14px;
+     font-weight: lighter;
+     list-style-type: none;
+     text-align: center;
+     text-decoration: none;
+     text-shadow: none;
+     width: 20px;
+}
+
+#paging_button ul li:hover, #paging_button-2 ul li:hover, #paging_button-3 ul li:hover {
+     color: #006699;
+}
+
+.ul-tabs-homepage li:hover {
+     color: #CC0000;
+     cursor: pointer;
+}
+
+.std ul, .std ol, .std dl, .std p, .std address, .std blockquote {
+    margin: 0 0 1em;
+    padding: 0;
+}
+.item_add_to_cart {
+    float: left;
+    margin-left: 9px;
+    width: 100%;
+}
+.no-rating {
+    font-family: inherit;
+    font-size: 10px;
+    margin: 8px 0 !important;
+    height: 12px;
+    overflow: hidden;
+}
+.box_items_text a {
+    color: #CE2350 !important;
+    float: left;
+    font-family: Monotype Corsiva;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.ul-tabs-homepage li {
+    float: left;
+    list-style: none outside none;
+    padding: 0;
+    height:205px;
+}
+.box_items {
+    background-color: #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 2px 3px 7px #CCCCCC;
+    float: left;
+    font-family: Monotype Corsiva,Arial,Helvetica,sans-serif;
+    height: 190px;
+    margin-bottom: 5px;
+    margin-right: 13px;
+    position: relative;
+    text-align: left;
+    width: 146px;
+    //z-index: 999;
+}
+.page-div {
+    margin-bottom: 10px;
+}
+.tab-special-price {
+float: left;
+margin-right: 16px;
+}
+#tabs p {text-align:center;}

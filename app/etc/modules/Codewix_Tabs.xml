@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Codewix_Tabs>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Codewix_Tabs>
+    </modules>
+</config> 

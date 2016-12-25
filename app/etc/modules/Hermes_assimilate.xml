@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hermes_assimilate>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hermes_assimilate>
+    </modules>
+</config>
